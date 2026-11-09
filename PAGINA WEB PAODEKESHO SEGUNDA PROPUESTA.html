@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PAODEKESHO | Repostería Artesanal</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            background-color: #fdf0f4;
+            color: #4a3b40;
+        }
+
+        /* NAVEGACIÓN */
+        header {
+            background-color: #ffffff;
+            border-bottom: 2px solid #f7cad0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            padding: 15px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 10px rgba(216, 27, 96, 0.05);
+        }
+
+        .logo {
+            font-size: 1.5em;
+            font-weight: 800;
+            color: #c2185b;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        nav a {
+            color: #880e4f;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 0.95em;
+            margin-left: 25px;
+            transition: color 0.2s;
+        }
+
+        nav a:hover {
+            color: #d81b60;
+        }
+
+        /* CONTENEDOR PRINCIPAL */
+        main {
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        /* SECCIONES Y TARJETAS */
+        .card {
+            background: #ffffff;
+            border-radius: 20px;
+            padding: 40px;
+            border: 1px solid #f8bbd0;
+            box-shadow: 0 4px 20px rgba(216, 27, 96, 0.06);
+            margin-bottom: 60px;
+        }
+
+        /* BOTONES DE OPCIÓN (INTERACTIVOS) */
+        .btn-select {
+            padding: 12px 15px;
+            border: 2px solid #f8bbd0;
+            background: #fff8fa;
+            color: #880e4f;
+            border-radius: 10px;
+            font-weight: 700;
+            font-size: 0.9em;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            outline: none;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        .btn-select:hover {
+            border-color: #d81b60;
+            background: #fce4ec;
+        }
+
+        /* Clase aplicada por JavaScript cuando el botón está activo */
+        .btn-select.active {
+            background-color: #d81b60 !important;
+            color: #ffffff !important;
+            border-color: #c2185b !important;
+            box-shadow: 0 4px 10px rgba(216, 27, 96, 0.3);
+        }
+
+        /* FORMULARIOS */
+        input, textarea {
+            width: 100%;
+            padding: 11px;
+            border: 1px solid #f48fb1;
+            border-radius: 8px;
+            font-size: 0.9em;
+            box-sizing: border-box;
+            outline: none;
+            background: #fffafc;
+            color: #4a3b40;
+        }
+
+        input:focus, textarea:focus {
+            border-color: #d81b60;
+            box-shadow: 0 0 5px rgba(216, 27, 96, 0.2);
+        }
+
+        .btn-submit {
+            width: 100%;
+            padding: 16px;
+            background: #d81b60;
+            color: #ffffff;
+            border: none;
+            border-radius: 12px;
+            font-size: 1em;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
+        .btn-submit:hover {
+            background: #c2185b;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- NAVEGACIÓN -->
+    <header>
+        <div class="logo">PAODEKESHO</div>
+        <nav>
+            <a href="#nosotros">Nuestra Historia</a>
+            <a href="#catalogo">Catálogo</a>
+            <a href="#crea-tu-pay">Personalizar</a>
+            <a href="#contacto">Contacto</a>
+        </nav>
+    </header>
+    <div style="text-align: center; margin-bottom: 20px;">
+        <img src="PAODEKESHO.png" alt="Logo PAODEKESHO" style="width: 180px; height: auto;">
+    </div>
+    <main class="container">
+
+        <!-- SECCIÓN: EMPRESA -->
+        <section id="nosotros" class="card">
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center;">
+                <div>
+                    <span style="color: #d81b60; font-size: 0.85em; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px;">Repostería Artesanal</span>
+                    <h1 style="color: #880e4f; font-size: 2.2em; font-weight: 800; margin: 10px 0 15px 0;">PAODEKESHO</h1>
+                    <p style="color: #6a4c55; line-height: 1.7; font-size: 0.95em; margin-bottom: 15px;">
+                        Especialistas en la elaboración de pays helados artesanales. Preparamos cada postre al momento combinando bases crujientes de galleta con toppings de alta calidad para ofrecer una experiencia única en cada rebanada.
+                    </p>
+                    <p style="color: #6a4c55; line-height: 1.7; font-size: 0.95em;">
+                        Ubicados en Ciudad Obregón, nuestro compromiso es brindar frescura, sabor y una presentación impecable en cada pedido a domicilio.
+                    </p>
+                </div>
+                <div style="background-color: #fff0f5; border-radius: 16px; padding: 30px; border: 1px solid #f8bbd0;">
+                    <h3 style="color: #880e4f; margin-top: 0; font-size: 1.1em; font-weight: 700; border-bottom: 1px solid #f48fb1; padding-bottom: 10px;">Información de Servicio</h3>
+                    <ul style="list-style: none; padding: 0; margin: 0; color: #880e4f; font-size: 0.9em; line-height: 2;">
+                        <li><strong>Ciudad:</strong> Ciudad Obregón</li>
+                        <li><strong>Cobertura:</strong> Entregas a domicilio locales</li>
+                        <li><strong>Modalidad:</strong> Pedidos bajo diseño y catálogo directo</li>
+                        <li><strong>Garantía:</strong> Elaboración helada 100% fresca</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN: CATÁLOGO CON ESPACIO PARA FOTOS -->
+        <section id="catalogo" style="margin-bottom: 60px;">
+            <div style="text-align: center; margin-bottom: 35px;">
+                <h2 style="color: #880e4f; font-size: 1.8em; font-weight: 800; margin: 0;">Catálogo de Especialidades</h2>
+                <p style="color: #ad1457; font-size: 0.95em; margin-top: 5px;">Nuestras combinaciones más solicitadas listas para ordenar</p>
+            </div>
+
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px;">
+                
+                <!-- Producto 1 -->
+                <div style="background: #ffffff; border-radius: 16px; border: 1px solid #f8bbd0; padding: 20px; overflow: hidden;">
+                    <!-- ESPACIO PARA FOTO -->
+                    <div style="width: 100%; height: 180px; background-color: #fce4ec; border-radius: 12px; margin-bottom: 15px; overflow: hidden; display: flex; align-items: center; justify-content: center; border: 1px dashed #f48fb1;">
+                        <img src="PAO FERRERO.PNG" alt="Pay Ferrero Rocher" style="width: 100%; height: 100%; object-fit: cover;" onerror="this.style.display='none'; this.parentNode.innerHTML='<span style=\'color:#c2185b; font-size:0.85em; font-weight:700;\'>Imagen: Pay Ferrero</span>';">
+                    </div>
+                    <span style="background: #fce4ec; color: #c2185b; font-size: 0.75em; font-weight: 700; padding: 4px 10px; border-radius: 8px; text-transform: uppercase;">Especialidad</span>
+                    <h3 style="color: #880e4f; font-size: 1.3em; margin: 10px 0 8px 0;">Pay Ferrero Rocher</h3>
+                    <p style="color: #6a4c55; font-size: 0.9em; line-height: 1.5; margin-bottom: 15px;">Base de galleta crujiente con relleno cremoso helado, cubierto con avellanas y chocolates Ferrero.</p>
+                    <div style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid #f8bbd0; padding-top: 15px;">
+                        <span style="color: #880e4f; font-weight: 800; font-size: 1.1em;">$280 MXN</span>
+                        <a href="#crea-tu-pay" style="background: #d81b60; color: #ffffff; text-decoration: none; padding: 8px 16px; border-radius: 8px; font-size: 0.85em; font-weight: 700;">Ordenar</a>
+                    </div>
+                </div>
+
+                <!-- Producto 2 -->
+                <div style="background: #ffffff; border-radius: 16px; border: 1px solid #f8bbd0; padding: 20px; overflow: hidden;">
+                    <!-- ESPACIO PARA FOTO -->
+                    <div style="width: 100%; height: 180px; background-color: #fce4ec; border-radius: 12px; margin-bottom: 15px; overflow: hidden; display: flex; align-items: center; justify-content: center; border: 1px dashed #f48fb1;">
+                        <img src="PAO DE FRESA.PNG" alt="Pay de Fresa Natural" style="width: 100%; height: 100%; object-fit: cover;" onerror="this.style.display='none'; this.parentNode.innerHTML='<span style=\'color:#c2185b; font-size:0.85em; font-weight:700;\'>Imagen: Pay Fresa</span>';">
+                    </div>
+                    <span style="background: #fce4ec; color: #c2185b; font-size: 0.75em; font-weight: 700; padding: 4px 10px; border-radius: 8px; text-transform: uppercase;">Frutal</span>
+                    <h3 style="color: #880e4f; font-size: 1.3em; margin: 10px 0 8px 0;">Pay de Fresa Natural</h3>
+                    <p style="color: #6a4c55; font-size: 0.9em; line-height: 1.5; margin-bottom: 15px;">Base de galleta mantequilla con capas de fresas seleccionadas y mermelada artesanal de la casa.</p>
+                    <div style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid #f8bbd0; padding-top: 15px;">
+                        <span style="color: #880e4f; font-weight: 800; font-size: 1.1em;">$250 MXN</span>
+                        <a href="#crea-tu-pay" style="background: #d81b60; color: #ffffff; text-decoration: none; padding: 8px 16px; border-radius: 8px; font-size: 0.85em; font-weight: 700;">Ordenar</a>
+                    </div>
+                </div>
+
+                <!-- Producto 3 -->
+                <div style="background: #ffffff; border-radius: 16px; border: 1px solid #f8bbd0; padding: 20px; overflow: hidden;">
+                    <!-- ESPACIO PARA FOTO -->
+                    <div style="width: 100%; height: 180px; background-color: #fce4ec; border-radius: 12px; margin-bottom: 15px; overflow: hidden; display: flex; align-items: center; justify-content: center; border: 1px dashed #f48fb1;">
+                        <img src="PAO DE OREO.PNG" alt="Pay Oreo Supreme" style="width: 100%; height: 100%; object-fit: cover;" onerror="this.style.display='none'; this.parentNode.innerHTML='<span style=\'color:#c2185b; font-size:0.85em; font-weight:700;\'>Imagen: Pay Oreo</span>';">
+                    </div>
+                    <span style="background: #fce4ec; color: #c2185b; font-size: 0.75em; font-weight: 700; padding: 4px 10px; border-radius: 8px; text-transform: uppercase;">Clásico</span>
+                    <h3 style="color: #880e4f; font-size: 1.3em; margin: 10px 0 8px 0;">Pay Oreo Supreme</h3>
+                    <p style="color: #6a4c55; font-size: 0.9em; line-height: 1.5; margin-bottom: 15px;">Base de galleta Oreo molida, crema helada de vainilla y trozos enteros de galleta en la cubierta.</p>
+                    <div style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid #f8bbd0; padding-top: 15px;">
+                        <span style="color: #880e4f; font-weight: 800; font-size: 1.1em;">$260 MXN</span>
+                        <a href="#crea-tu-pay" style="background: #d81b60; color: #ffffff; text-decoration: none; padding: 8px 16px; border-radius: 8px; font-size: 0.85em; font-weight: 700;">Ordenar</a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- SECCIÓN: PERSONALIZAR (CON CAMBIO DE COLOR EN BOTONES) -->
+        <section id="crea-tu-pay" class="card">
+            
+            <div style="border-bottom: 1px solid #f8bbd0; padding-bottom: 20px; margin-bottom: 30px;">
+                <h2 style="color: #880e4f; font-size: 1.8em; font-weight: 800; margin: 0;">Personalización de Pedido</h2>
+                <p style="color: #ad1457; font-size: 0.95em; margin-top: 5px;">Seleccione los componentes de su pay e ingrese los datos de entrega</p>
+            </div>
+
+            <form id="payFormV3" onsubmit="realizarPedido(event)">
+                
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin-bottom: 30px;">
+                    
+                    <!-- Selección de Base -->
+                    <div>
+                        <label style="display: block; color: #880e4f; font-weight: 700; font-size: 0.9em; margin-bottom: 10px; text-transform: uppercase; letter-spacing: 0.5px;">1. Base de Galleta</label>
+                        <div style="display: flex; flex-direction: column; gap: 8px;">
+                            <button type="button" class="btn-select btn-base" onclick="seleccionarOpcion(this, 'base')">Galleta Clásica (María)</button>
+                            <button type="button" class="btn-select btn-base" onclick="seleccionarOpcion(this, 'base')">Galleta Oreo</button>
+                            <button type="button" class="btn-select btn-base" onclick="seleccionarOpcion(this, 'base')">Galleta Canelita</button>
+                            <button type="button" class="btn-select btn-base" onclick="seleccionarOpcion(this, 'base')">Galleta Mantequilla</button>
+                        </div>
+                        <input type="hidden" id="baseSeleccionada" required>
+                    </div>
+
+                    <!-- Selección de Topping -->
+                    <div>
+                        <label style="display: block; color: #880e4f; font-weight: 700; font-size: 0.9em; margin-bottom: 10px; text-transform: uppercase; letter-spacing: 0.5px;">2. Sabor / Topping Principal</label>
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 8px;">
+                            <button type="button" class="btn-select btn-topping" onclick="seleccionarOpcion(this, 'topping')">Ferrero</button>
+                            <button type="button" class="btn-select btn-topping" onclick="seleccionarOpcion(this, 'topping')">Oreo</button>
+                            <button type="button" class="btn-select btn-topping" onclick="seleccionarOpcion(this, 'topping')">Fresa</button>
+                            <button type="button" class="btn-select btn-topping" onclick="seleccionarOpcion(this, 'topping')">Kiwi</button>
+                            <button type="button" class="btn-select btn-topping" onclick="seleccionarOpcion(this, 'topping')">Príncipe</button>
+                            <button type="button" class="btn-select btn-topping" onclick="seleccionarOpcion(this, 'topping')">Plátano</button>
+                        </div>
+                        <input type="hidden" id="toppingSeleccionado" required>
+                    </div>
+
+                </div>
+
+                <!-- Especificaciones Adicionales -->
+                <div style="margin-bottom: 30px;">
+                    <label for="extra" style="display: block; color: #880e4f; font-weight: 700; font-size: 0.9em; margin-bottom: 8px; text-transform: uppercase; letter-spacing: 0.5px;">3. Indicaciones Especiales</label>
+                    <textarea id="extra" rows="3" placeholder="Instrucciones adicionales para la preparación o mensaje personalizado..."></textarea>
+                </div>
+
+                <!-- Datos de Envío -->
+                <div style="background-color: #fff0f5; border-radius: 12px; padding: 25px; border: 1px solid #f8bbd0; margin-bottom: 30px;">
+                    <h3 style="color: #880e4f; font-size: 1.1em; font-weight: 700; margin-top: 0; margin-bottom: 15px;">4. Datos de Envío y Contacto</h3>
+                    
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-bottom: 15px;">
+                        <div>
+                            <label for="nombre" style="display: block; font-size: 0.85em; font-weight: 700; color: #880e4f; margin-bottom: 5px;">Nombre Completo</label>
+                            <input type="text" id="nombre" placeholder="Nombre y Apellidos" required>
+                        </div>
+                        <div>
+                            <label for="telefono" style="display: block; font-size: 0.85em; font-weight: 700; color: #880e4f; margin-bottom: 5px;">Teléfono (WhatsApp)</label>
+                            <input type="tel" id="telefono" placeholder="Número a 10 dígitos" required>
+                        </div>
+                    </div>
+
+                    <div style="display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 15px;">
+                        <div>
+                            <label for="domicilio" style="display: block; font-size: 0.85em; font-weight: 700; color: #880e4f; margin-bottom: 5px;">Calle y Número</label>
+                            <input type="text" id="domicilio" placeholder="Dirección completa" required>
+                        </div>
+                        <div>
+                            <label for="cp" style="display: block; font-size: 0.85em; font-weight: 700; color: #880e4f; margin-bottom: 5px;">Código Postal</label>
+                            <input type="text" id="cp" placeholder="85000" required>
+                        </div>
+                        <div>
+                            <label for="ciudad" style="display: block; font-size: 0.85em; font-weight: 700; color: #880e4f; margin-bottom: 5px;">Ciudad</label>
+                            <input type="text" id="ciudad" value="Ciudad Obregón" required>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Datos de Pago -->
+                <div style="background-color: #fff0f5; border-radius: 12px; padding: 25px; border: 1px solid #f8bbd0; margin-bottom: 30px;">
+                    <h3 style="color: #880e4f; font-size: 1.1em; font-weight: 700; margin-top: 0; margin-bottom: 15px;">5. Información de Pago</h3>
+                    
+                    <div style="display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 15px;">
+                        <div>
+                            <label for="tarjeta" style="display: block; font-size: 0.85em; font-weight: 700; color: #880e4f; margin-bottom: 5px;">Número de Tarjeta</label>
+                            <input type="text" id="tarjeta" maxlength="16" placeholder="0000 0000 0000 0000" required>
+                        </div>
+                        <div>
+                            <label for="exp" style="display: block; font-size: 0.85em; font-weight: 700; color: #880e4f; margin-bottom: 5px;">Expiración</label>
+                            <input type="text" id="exp" placeholder="MM/AA" maxlength="5" required>
+                        </div>
+                        <div>
+                            <label for="cvv" style="display: block; font-size: 0.85em; font-weight: 700; color: #880e4f; margin-bottom: 5px;">CVV</label>
+                            <input type="password" id="cvv" placeholder="123" maxlength="4" required>
+                        </div>
+                    </div>
+                </div>
+
+                <button type="submit" class="btn-submit">
+                    Confirmar y Finalizar Pedido
+                </button>
+
+            </form>
+        </section>
+
+    </main>
+
+    <!-- PIE DE PÁGINA -->
+    <footer id="contacto" style="background: #880e4f; color: #ffffff; padding: 40px 20px; text-align: center; font-size: 0.85em;">
+        <p style="font-weight: 700; font-size: 1.1em; margin-bottom: 10px; letter-spacing: 1px;">PAODEKESHO</p>
+        <p style="color: #f8bbd0; margin-bottom: 5px;">Ciudad Obregón, Sonora, México</p>
+        <p style="color: #f8bbd0; margin-top: 0;">Atención a clientes y pedidos especiales vía WhatsApp</p>
+    </footer>
+
+    <!-- SCRIPT DE INTERACTIVIDAD DE BOTONES -->
+    <script>
+        function seleccionarOpcion(elemento, tipo) {
+            // Obtener todos los botones de la misma categoría
+            const botones = document.querySelectorAll('.btn-' + tipo);
+            
+            // Remover la clase activa de los demás botones
+            botones.forEach(btn => btn.classList.remove('active'));
+            
+            // Agregar la clase activa al botón presionado
+            elemento.classList.add('active');
+            
+            // Guardar el valor seleccionado en el campo oculto
+            if (tipo === 'base') {
+                document.getElementById('baseSeleccionada').value = elemento.innerText;
+            } else if (tipo === 'topping') {
+                document.getElementById('toppingSeleccionado').value = elemento.innerText;
+            }
+        }
+
+        function realizarPedido(e) {
+            e.preventDefault();
+            const base = document.getElementById('baseSeleccionada').value;
+            const topping = document.getElementById('toppingSeleccionado').value;
+            
+            if (!base || !topping) {
+                alert('Por favor seleccione una base y un sabor para su pay.');
+                return;
+            }
+            
+            alert('¡Gracias por tu pedido! Tu pay de ' + topping + ' con base ' + base + ' ha sido registrado con éxito.');
+        }
+    </script>
+</body>
+</html>
